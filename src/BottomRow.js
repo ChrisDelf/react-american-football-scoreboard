@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import App from "./App.js"
-
+import QuarterTracker, {quarter} from "./quarterCount.js"
 
 const BottomRow = () => {
 
@@ -21,7 +21,8 @@ const BottomRow = () => {
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">0</div>
+
+        <QuarterTracker />
 
       </div>
     </div>

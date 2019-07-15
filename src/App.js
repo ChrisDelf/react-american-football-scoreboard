@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import BottomRow  from "./BottomRow";
 import Timer from "./timer.js"
+import QuarterTracker from "./quarterCount.js"
 
 
 
@@ -37,15 +38,14 @@ function App() {
           <button className="homeButtons__touchdown" onClick ={() => setHomeScoreCount(homeScore + 7)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick = {() => setHomeScoreCount(homeScore + 3)}>Home Field Goal</button>
         </div>
-        <div className="awayButtons">
+         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick = {() => setAwayScoreCount(awayScore +7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick = {() => setAwayScoreCount(awayScore +3)}>Away Field Goal</button>
 
         </div>
-       <div className="awayButtons">
-         <button className="quarterAddButton">add Quarter</button>
-         <button className="quarterRemoveButton">Remove Quarter</button>
-         </div>
+
+
+        {/*<QuarterTracker /> */}
       </section>
     </div>
   );

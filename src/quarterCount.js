@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import "./App.css";
-import App from "./App.js"
 
 
-function quarterCount () {
-const [gameQuarter, setGameQuarterCount] = useState(1)
-  return (gameQuarter, setGameQuarterCount)
+function QuarterTracker () {
+ const [quarter, setQuarter] = useState(1);
 
-};
+  return (
 
-export default quarterCount
+    <div className= "quarterButtons">
+      <div className="quarter__value">{quarter}</div>
+      <button className="quarterAddButton" onClick = {() => setQuarter(quarter + 1)}>add Quarter</button>
+      <button className="quarterRemoveButton" onClick ={() => setQuarter(quarter -1)}>Remove Quarter</button>
+</div>
+
+  )
+
+
+}
+
+export default QuarterTracker
